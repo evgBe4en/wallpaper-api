@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/data', [\App\Http\Controllers\FirstController::class, 'index']);
+//Route::get('/run-migration', function () {
+//    \Illuminate\Support\Facades\Artisan::call('optimize:clear');
+//    \Illuminate\Support\Facades\Artisan::call('migrate:fresh --seed');
+//
+//    return "Migration executed successfully!";
+//});
